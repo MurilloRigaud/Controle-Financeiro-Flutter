@@ -100,7 +100,6 @@ flutter build apk --release
 
 ## 📋 Requisitos Atendidos
 
-### Nível Funcional 
 - ✅ CRUD de transações (Adicionar, Listar, Editar, Excluir)
 - ✅ Cálculo automático de saldo
 - ✅ Filtro por categoria e tipo (Receita/Despesa)
