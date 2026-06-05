@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377596281343",
+    "project_id": "controle-financeiro-flut-8aa38",
+    "storage_bucket": "controle-financeiro-flut-8aa38.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377596281343:android:956ab9b07c96ce50dee7ca",
+        "android_client_info": {
+          "package_name": "com.example.controle_financeiro_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQefTymwGN12jkyVwqz9Px-M4pOqy5JzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'viewmodels/auth_viewmodel.dart';
-import 'viewmodels/transaction_viewmodel.dart';
-import 'views/auth_view.dart';
-import 'views/dashboard_view.dart';
-import 'views/results_view.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'features/auth/view/auth_view.dart';
+import 'features/transactions/view/dashboard_view.dart';
+import 'features/transactions/view/results_view.dart';
 
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AuthViewModel()),
-        ChangeNotifierProvider(create: (_) => TransactionViewModel()),
-      ],
-      child: const MyApp(),
-    ),
-  );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Controle Financeiro',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3949AB)),
         useMaterial3: true,
       ),
       initialRoute: '/',
